@@ -300,7 +300,7 @@ def xd():
         print('\033[1;97m─────────────────────────────────────────────────────')
         for love in user:
             uid = code+love
-            pwx = [love,'57273200']
+            pwx = [love,'Bangladesh']
             manshera.submit(sexy,uid,pwx,tl)
     print('')
     print('\033[1;97m─────────────────────────────────────────────────────')
